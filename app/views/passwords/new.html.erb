@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Mot de passse oublié</div>
+
+  <div class="panel-body">
+    <!--N'ayant pas besoin d'instance de modèle pour le formulaire on creè juste un hash(:user) pour le représenter-->
+    <%=form_for :user, url: passwords_path, html: {class: 'form-horizontal'} do |f|%>
+
+      <!--Champ username-->
+      <div class="form-group">
+        <%= f.label :email, "Votre Email", class: 'col-md-4 control-label' %>
+        <div class="col-md-6">
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+      </div>
+
+      <!--Champ bouton de validation-->
+      <div class="form-group">
+        <div class="col-md-6 col-md-offset-4">
+          <button type="submit" class="btn btn-primary">Envoyer le line de reinitialisation</button>
+        </div>
+    <% end %>
+    </div>
+  </div>
+</div>
